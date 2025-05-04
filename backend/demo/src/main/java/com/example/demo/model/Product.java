@@ -8,7 +8,7 @@ import jakarta.persistence.ManyToOne;
 @Entity
 public class Product {
     @Id
-    private Long id;
+    private int id;
     private String name;
     private String barcode;
     private String description;

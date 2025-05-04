@@ -9,7 +9,7 @@ import jakarta.persistence.OneToMany;
 @Entity
 public class Category {
     @Id
-    private Long id;
+    private int id;
     private String name;
     private String description;
 
