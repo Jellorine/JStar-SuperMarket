@@ -1,17 +1,19 @@
 package com.example.demo.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
+import java.util.List;
 
 @Entity
-@Table(name = "User")
 public class User {
     @Id
     private int id;
+
     private String username;
     private String password;
     private String name;
     private String role;
     private Boolean status;
+
+    @OneToMany(mappedBy = "user")
+    private List<Sale> sales;
 }
