@@ -16,6 +16,10 @@ public class Product {
     @ManyToOne
     @JoinColumn(name = "category_id")
     private Category category;
+    
+    @ManyToOne
+    @JoinColumn(name = "supplier_id", nullable = false)
+    private Supplier supplier;
 
     private double price;
     private double costPrice;
@@ -81,7 +85,6 @@ public class Product {
 	}
 	public void setStatus(Boolean status) {
 		this.status = status;
-	}
-    
+	}   
     
 }
