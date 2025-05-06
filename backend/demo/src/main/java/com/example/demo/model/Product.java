@@ -1,9 +1,13 @@
 package com.example.demo.model;
 
+import java.util.List;
+
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
 
 @Entity
 public class Product {
@@ -20,6 +24,9 @@ public class Product {
     @ManyToOne
     @JoinColumn(name = "supplier_id", nullable = false)
     private Supplier supplier;
+    
+    @OneToMany(mappedBy = "product", cascade = CascadeType.ALL)
+    private List<StockLog> stockLogs;
 
     private double price;
     private double costPrice;
@@ -85,6 +92,18 @@ public class Product {
 	}
 	public void setStatus(Boolean status) {
 		this.status = status;
+	}
+	public Supplier getSupplier() {
+		return supplier;
+	}
+	public void setSupplier(Supplier supplier) {
+		this.supplier = supplier;
+	}
+	public List<StockLog> getStockLogs() {
+		return stockLogs;
+	}
+	public void setStockLogs(List<StockLog> stockLogs) {
+		this.stockLogs = stockLogs;
 	}   
     
 }
