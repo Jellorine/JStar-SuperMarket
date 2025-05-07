@@ -16,7 +16,7 @@ INSERT INTO customer (id, name, email, phone, loyalty_points) VALUES
 (2, 'Jane Smith', 'jane.smith@example.com', '0777654321', 150);
 
 -- Insert Products
-INSERT INTO product (id, name, barcode, description, category_id, supplier_id, price, cost_price, quantity_in_stock, unit, status) VALUES
+INSERT INTO product (id, name, itemcode, description, category_id, supplier_id, price, cost_price, quantity_in_stock, unit, status) VALUES
 (1, 'Coca Cola 1L', '1234567890001', 'Soft drink', 1, 1, 200.00, 150.00, 50, 'bottle', true),
 (2, 'Pepsi 1L', '1234567890002', 'Carbonated beverage', 1, 1, 190.00, 145.00, 40, 'bottle', true),
 (3, 'Sun Chips 200g', '1234567890003', 'Wheat snacks', 2, 2, 130.00, 90.00, 60, 'packet', true),

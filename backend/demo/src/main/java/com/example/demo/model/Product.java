@@ -16,7 +16,7 @@ public class Product {
     @Id
     private int id;
     private String name;
-    private String barcode;
+    private String itemcode;
     private String description;
 
     @ManyToOne
@@ -48,11 +48,11 @@ public class Product {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public String getBarcode() {
-		return barcode;
+	public String getItemcode() {
+		return itemcode;
 	}
-	public void setBarcode(String barcode) {
-		this.barcode = barcode;
+	public void setItemcode(String itemcode) {
+		this.itemcode = itemcode;
 	}
 	public String getDescription() {
 		return description;

@@ -54,7 +54,7 @@ public class ProductServiceImp implements ProductService {
     public Product updateProduct(int id, Product product) {
         Product existing = getProductById(id);
         existing.setName(product.getName());
-        existing.setBarcode(product.getBarcode());
+        existing.setItemcode(product.getItemcode());
         existing.setDescription(product.getDescription());
         existing.setPrice(product.getPrice());
         existing.setCostPrice(product.getCostPrice());
