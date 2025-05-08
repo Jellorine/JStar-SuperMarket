@@ -5,7 +5,10 @@ import java.util.List;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 import jakarta.persistence.CascadeType;
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
@@ -14,9 +17,11 @@ import jakarta.persistence.OneToMany;
 @Entity
 public class Product {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String name;
-    private String itemcode;
+    @Column(unique = true, nullable = false)
+    private String itemCode;
     private String description;
 
     @ManyToOne
@@ -48,11 +53,12 @@ public class Product {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public String getItemcode() {
-		return itemcode;
+	public String getItemCode() {
+	    return itemCode;
 	}
-	public void setItemcode(String itemcode) {
-		this.itemcode = itemcode;
+
+	public void setItemCode(String itemCode) {
+	    this.itemCode = itemCode;
 	}
 	public String getDescription() {
 		return description;
