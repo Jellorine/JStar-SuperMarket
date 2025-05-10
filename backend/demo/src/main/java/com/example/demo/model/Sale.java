@@ -10,6 +10,7 @@ import com.fasterxml.jackson.annotation.JsonManagedReference;
 @Entity
 public class Sale {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String invoiceNumber;
 

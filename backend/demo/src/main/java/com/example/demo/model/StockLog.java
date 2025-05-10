@@ -8,6 +8,7 @@ import com.fasterxml.jackson.annotation.JsonBackReference;
 @Entity
 public class StockLog {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
     @ManyToOne

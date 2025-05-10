@@ -8,6 +8,7 @@ import jakarta.persistence.*;
 @Entity
 public class SaleItem {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
     @ManyToOne
