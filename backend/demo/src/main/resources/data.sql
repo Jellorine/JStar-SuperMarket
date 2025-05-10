@@ -11,9 +11,9 @@ INSERT INTO supplier (id, name, contact_person, phone, email, address) VALUES
 (3, 'Daily Essentials Inc', 'Vaanithasan', '0778965324', 'essentials@example.com', 'Batticaloa');
 
 -- Insert Customers
-INSERT INTO customer (id, name, email, phone, loyalty_points) VALUES
-(1, 'John Doe', 'john.doe@example.com', '0771234567', 100),
-(2, 'Jane Smith', 'jane.smith@example.com', '0777654321', 150);
+INSERT INTO customer (id, name, phone, loyalty_points) VALUES
+(1, 'John Doe',  '0771234567', 100),
+(2, 'Jane Smith', '0777654321', 150);
 
 -- Insert Products
 INSERT INTO product (id, name, item_code, description, category_id, supplier_id, price, cost_price, quantity_in_stock, unit, status) VALUES
